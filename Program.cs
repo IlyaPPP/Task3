@@ -5,25 +5,26 @@
 9012 -> 12 */
 
 int a = Enter();
-int[] array = { 0 }, Summ();
-int result = Summ();
-Console.Write($"{3}, {5} -> {result}");
+int find = 0;
+int result = 0;
+Summ(a);
+Console.Write($"Суммы цифр равна -> {result}");
 
-string Length()
+int Length()
 {
-    string str = a.ToString(); ;
-    return str;
+    int len = a.ToString().Length;
+    return len;
 }
 
-int[] Summ(int _a)
+int Summ(int a)
 {
-    for (int i = 0; i < a; i++)
+    for (int i = 0; i < Length(); i++)
     {
-        array[i] = Length()[i];
-        int q = array[i];
-        _a = a;
+        find = a - a % 10;
+        result = result + (a - find);
+        a = a / 10;
     }
-    return array;
+    return result;
 }
 
 int Enter()
