@@ -1,37 +1,17 @@
-﻿/* Задача 27: Напишите программу, которая принимает на вход число
-и выдаёт сумму цифр в числе.
-452 -> 11
-82 -> 10
-9012 -> 12 */
+﻿/* Задача 29: Напишите программу, которая задаёт массив из 8 элементов
+и выводит их на экран.
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+6, 1, 33 -> [6, 1, 33] */
 
-int a = Enter();
-int find = 0;
-int result = 0;
-Summ(a);
-Console.Write($"Суммы цифр равна -> {result}");
-
-int Length()
+Random();
+int Random()
 {
-    int len = a.ToString().Length;
-    return len;
+    for (int i = 0; i < 8; i++) { }
+    return new Random().Next(0, 9);
 }
 
-int Summ(int a)
-{
-    for (int i = 0; i < Length(); i++)
-    {
-        find = a - a % 10;
-        result = result + (a - find);
-        a = a / 10;
-    }
-    return result;
-}
+int[] array = { Random(), Random(), Random(), Random(), Random(), Random(), Random(), Random() };
 
-int Enter()
-{
-    int n;
-    Console.Write("Введите число: ");
-    int.TryParse(Console.ReadLine()!, out n);
-    return n;
-}
+Console.Write($"{array[0]}, {array[1]}, {array[2]}, {array[3]}, {array[4]}, {array[5]}, {array[6]}, {array[7]} -> ");
+Console.Write($"[{array[0]}, {array[1]}, {array[2]}, {array[3]}, {array[4]}, {array[5]}, {array[6]}, {array[7]}]");
 
